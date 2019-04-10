@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>                                                            
+<input id="stringInput" type="text" />
+<input id="getPalindroms" type="button" value="Получить палиндромы" />
+<div id="result"/>
+<script type="text/javascript">
+$('#getPalindroms').on('click', function() {
+        var s = encodeURIComponent($('#stringInput').val());
+	$.get("/find.php", {string: s}, function( data ) { 
+		$('#result').text(data);
+	});        
+       
+    });
+</script>
+</body>                                           
+</html>
