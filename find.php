@@ -15,7 +15,7 @@ function getPalindromes($str) {
 			}
 		}
 	}
-	if (is_null($result)) $result = "Нет палиндромов";
+	if (is_null($result)) $result = "No palindroms";
 	return $result;
 }
 function isPalindrom($str) {
