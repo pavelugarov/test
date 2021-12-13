@@ -36,9 +36,9 @@ class Api
 		$result = '';
 
 		$result = str_replace("%id%", $array.id, $template);
-		$result = str_replace("%name%", $array.name, $template);
-		$result = str_replace("%role%", $array.role, $template);
-		$result = str_replace("%salary%", $array.salary, $template);    
+		$result = str_replace("%name%", $array.name, $result);
+		$result = str_replace("%role%", $array.role, $result);
+		$result = str_replace("%salary%", $array.salary, $result);    
 
 		return $result;
 	}
