@@ -34,11 +34,11 @@ class Api
 	public function get_api_path(array $array, string $template) : string
 	{
 		$result = '';
-
-		$result = str_replace("%id%", $array.id, $template);
-		$result = str_replace("%name%", $array.name, $result);
-		$result = str_replace("%role%", $array.role, $result);
-		$result = str_replace("%salary%", $array.salary, $result);    
+		
+		$result = str_replace("%id%", $array['id'], $template);
+		$result = str_replace("%name%", $array['name'], $result);
+		$result = str_replace("%role%", $array['role'], $result);
+		$result = str_replace("%salary%", $array['salary'], $result);    
 
 		return $result;
 	}
